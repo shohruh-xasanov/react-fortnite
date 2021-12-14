@@ -1,14 +1,32 @@
+
 .main
 {
     min-height: 63vh;
 }
 .container
 {
-    width: 90%;
+    width: 84%;
 }
 .goods
 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1rem;
+}
+.cart
+{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+    z-index: 5;
+}
+
+@media (min-width: 767px) {
+    .cart
+    {
+        top: 5rem;
+        bottom: unset;
+    }
 }

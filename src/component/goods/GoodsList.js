@@ -1,6 +1,6 @@
 import GoodsItem from "./GoodsItem";
 
-function GoodsList({goods = []}) {
+function GoodsList({goods = [], addOrder}) {
 
     if(!goods.length){
         return (
@@ -11,7 +11,7 @@ function GoodsList({goods = []}) {
     return (
         <div className="goods" >
             { goods.map(item => (
-                 <GoodsItem key={item.id}  {...item}/>
+                 <GoodsItem key={item.id}  {...item} addOrder={()=>addOrder({...item})}/>
             ))
             }
         </div>
