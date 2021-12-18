@@ -1,8 +1,7 @@
 
 
  function GoodsItem(props) {
-    const { id, full_background, name, description, price, addOrder} = props
-   
+    const { id, full_background, name, description, addOrder,price} = props
     return (
         <div className="card" id={id} onClick={addOrder}>
             <div className="card-image">

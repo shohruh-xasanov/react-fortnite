@@ -1,6 +1,10 @@
 import GoodsItem from "./GoodsItem";
+import {useContext} from 'react'
+import { ShopContext } from '../../contexts';
 
-function GoodsList({goods = [], addOrder}) {
+function GoodsList({goods = []}) {
+    
+    const {addOrder} = useContext(ShopContext)
 
     if(!goods.length){
         return (

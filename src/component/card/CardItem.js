@@ -1,10 +1,14 @@
 import { useState } from "react";
+import { useContext } from "react";
+import { ShopContext } from "../../contexts";
 
 function CardItem(props) {
 
     const [value, setValue] = useState(1)
 
-    const {item, removeOrder} = props
+    const {item} = props
+    const {removeOrder} = useContext(ShopContext)
+
   
     const inc = () => {
       setValue(prev => prev + 1)
